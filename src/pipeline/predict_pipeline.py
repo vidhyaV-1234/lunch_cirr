@@ -12,7 +12,7 @@ class PredictPipeline:
     def predict(self,features):
         try:
             model_path=r'artifacts\model.pkl'
-            preprocessor_path=r'artifacts\preprocessor.pkl'
+            preprocessor_path=r'artifacts\proprocessor.pkl'
             print("Before Loading")
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
@@ -28,38 +28,38 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(  self,
-        rollno: int ,
-        std: int ,
-        gender: int,
-        sibiling:int,
-        place: int,
-        transport: int,
-        income: int,):
+        N: int ,
+        P: int ,
+        K: int,
+        temperature:float,
+        humidity: float,
+        ph: float,
+        rainfall: float,):
 
-        self.gender = gender
+        self.N = N
 
-        self.std = std
+        self.P = P
 
-        self.rollno = rollno
+        self.K = K
 
-        self.sibiling = sibiling
+        self.temperature = temperature
 
-        self.place = place
+        self.humidity = humidity
 
-        self.transport = transport
+        self.ph = ph
 
-        self.income = income
+        self.rainfall = rainfall
 
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
-                "rollno": [self.rollno],
-                "std": [self.std],
-                "gender": [self.gender],
-                "sibiling": [self.sibiling],
-                "place": [self.place],
-                "transport": [self.transport],
-                "income": [self.income],
+                "N": [self.N],
+                "P": [self.P],
+                "K": [self.K],
+                "temperature": [self.temperature],
+                "humidity": [self.humidity],
+                "ph": [self.ph],
+                "rainfall": [self.rainfall],
             }
 
             return pd.DataFrame(custom_data_input_dict)
