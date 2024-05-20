@@ -30,7 +30,7 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["N","P","K","temperature","humidity","ph","rainfall"]
+            numerical_columns = ["ID","N_Days","Drug","Age","Sex","Ascites","Hepatomegaly","Spiders","Edema","Bilirubin","Cholesterol","Albumin","Copper","Alk_Phos","SGOT","Tryglicerides","Platelets","Prothrombin","Stage"]
             '''categorical_columns = [
                 "label"
             ]'''
@@ -80,13 +80,13 @@ class DataTransformation:
 
             preprocessing_obj=self.get_data_transformer_object()
 
-            target_column_name="label"
-            numerical_columns = ["N","P","K","temperature","humidity","ph","rainfall"]
+            target_column_name="Status"
+            numerical_columns = ["ID","N_Days","Drug","Age","Sex","Ascites","Hepatomegaly","Spiders","Edema","Bilirubin","Cholesterol","Albumin","Copper","Alk_Phos","SGOT","Tryglicerides","Platelets","Prothrombin","Stage"]
 
-            input_feature_train_df=train_df.drop(columns=[target_column_name,"Unnamed: 0"],axis=1)
+            input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name] 
 
-            input_feature_test_df=test_df.drop(columns=[target_column_name,"Unnamed: 0"],axis=1)
+            input_feature_test_df=test_df.drop(columns=[target_column_name],axis=1)
             target_feature_test_df=test_df[target_column_name] 
 
             logging.info(
