@@ -17,7 +17,7 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-name='crop_prediction',
+name='lunch cirr',
 version='0.0.1',
 author='Vidhya',
 author_email='vidhyakmp2005@gmail.com',

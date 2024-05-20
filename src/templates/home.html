@@ -5,41 +5,101 @@
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
-            <legend>Student Exam Performance Prediction</legend>
+            <legend>lunch cirr</legend>
         </h1>
         <div class="mb-3">
-            <label class="form-label">N</label>
-            <input class="form-control" type="number" name="N"
-                placeholder="Enter value for N" min='0' max='100' />
-        <div class="mb-3">
-            <label class="form-label">P</label>
-            <input class="form-control" type="number" name="P"
-                placeholder="Enter value for P" min='0' max='100' />
+            <label class="form-label">ID</label>
+            <input class="form-control" type="number" name="ID" placeholder="Enter value for ID" min="0" max="100" required />
         </div>
         <div class="mb-3">
-            <label class="form-label">K</label>
-            <input class="form-control" type="number" name="K"
-                placeholder="Enter value for K" min='0' max='100' />
+            <label class="form-label">N_Days</label>
+            <input class="form-control" type="number" name="N_Days"
+                placeholder="Enter value for N_Days" min='0' max='100' />
         </div>
         <div class="mb-3">
-            <label class="form-label">temperature</label>
-            <input class="form-control" type="number" name="temperature"
-                placeholder="Enter temperature" min='0' max='100' />
+            <label class="form-label">Drug</label>
+            <input class="form-control" type="number" name="Drug"
+                placeholder="Enter value for Drug" min='0' max='100' />
         </div>
         <div class="mb-3">
-            <label class="form-label">humidity</label>
-            <input class="form-control" type="number" name="humidity"
-                placeholder="Enter  humidity" min='0' max='100' />
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder="Enter Age" min='0' max='100' />
         </div>
         <div class="mb-3">
-            <label class="form-label">ph</label>
-            <input class="form-control" type="number" name="ph"
-                placeholder="Enter ph" min='0' max='7' />
+            <label class="form-label">Sex</label>
+            <input class="form-control" type="number" name="Sex"
+                placeholder="Enter  Sex" min='0' max='100' />
         </div>
         <div class="mb-3">
-            <label class="form-label">rainfall</label>
-            <input class="form-control" type="number" name="rainfall"
-                placeholder="Enter rainfall" min='0' max='100' />
+            <label class="form-label">Ascites</label>
+            <input class="form-control" type="number" name="Ascites"
+                placeholder="Enter Ascites" min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Hepatomegaly</label>
+            <input class="form-control" type="number" name="Hepatomegaly"
+                placeholder="Enter Hepatomegaly" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Spiders</label>
+            <input class="form-control" type="number" name="Spiders"
+                placeholder="Enter value for Spiders" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Edema</label>
+            <input class="form-control" type="number" name="Edema"
+                placeholder="Enter value for Edema" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bilirubin</label>
+            <input class="form-control" type="number" name="Bilirubin"
+                placeholder="Enter value for Bilirubin" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Cholesterol</label>
+            <input class="form-control" type="number" name="Cholesterol"
+                placeholder="Enter Cholesterol" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Albumin</label>
+            <input class="form-control" type="number" name="Albumin"
+                placeholder="Enter  Albumin" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Copper</label>
+            <input class="form-control" type="number" name="Copper"
+                placeholder="Enter Copper" min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Alk_Phos</label>
+            <input class="form-control" type="number" name="Alk_Phos"
+                placeholder="Enter Alk_Phos" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">SGOT</label>
+            <input class="form-control" type="number" name="SGOT"
+                placeholder="Enter SGOT" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Tryglicerides</label>
+            <input class="form-control" type="number" name="Tryglicerides"
+                placeholder="Enter  Tryglicerides" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Platelets</label>
+            <input class="form-control" type="number" name="Platelets"
+                placeholder="Enter Platelets" min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Prothrombin</label>
+            <input class="form-control" type="number" name="Prothrombin"
+                placeholder="Enter Prothrombin" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Stage</label>
+            <input class="form-control" type="number" name="Stage"
+                placeholder="Enter Stage" min='0' max='100' />
         </div>
         <div class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict" required />

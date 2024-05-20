@@ -18,28 +18,30 @@ def index():
 @app.route('/predictdata',methods=['GET','POST'])
 def predict_datapoint():
     if request.method=='GET':
-        return render_template('home.html')
+        return render_template('home.html') 
     else:
         data=CustomData(
-            N_Days=request.form.get('N_Days'),
-            Drug=request.form.get('Drug'),
-            Age=request.form.get('Age'),
-            Sex=request.form.get('Sex'),
-            Ascites=request.form.get('Ascites'),
-            Hepatomegaly=request.form.get('Hepatomegaly'),
-            Spiders=request.form.get('Spiders'),
-            Edema=request.form.get('Edema'),
-            Bilirubin=float(request.form.get('Bilirubin')),
-            Cholesterol=float(request.form.get('Cholesterol')),
-            Albumin=float(request.form.get('Albumin')),
-            Copper=float(request.form.get('Copper')),
-            Alk_Phos=float(request.form.get('Alk_Phos')),
-            SGOT=float(request.form.get('SGOT')),
-            Tryglicerides=float(request.form.get('Tryglicerides'))
-            Platelets=float(request.form.get('Platelets')),
-            Prothrombin=float(request.form.get('Prothrombin')),
-            Stage=float(request.form.get('Stage'))
-            )
+        ID=int(request.form.get('ID')),
+        N_Days=int(request.form.get('N_Days')),
+        Drug=int(request.form.get('Drug')),
+        Age=int(request.form.get('Age')),
+        Sex=int(request.form.get('Sex')),
+        Ascites=int(request.form.get('Ascites')),
+        Hepatomegaly=int(request.form.get('Hepatomegaly')),
+        Spiders=int(request.form.get('Spiders')),
+        Edema=int(request.form.get('Edema')),
+        Bilirubin=float(request.form.get('Bilirubin')),
+        Cholesterol=float(request.form.get('Cholesterol')),
+        Albumin=float(request.form.get('Albumin')),
+        Copper=float(request.form.get('Copper')),
+        Alk_Phos=float(request.form.get('Alk_Phos')),
+        SGOT=float(request.form.get('SGOT')),
+        Tryglicerides=float(request.form.get('Tryglicerides')),
+        Platelets=float(request.form.get('Platelets')),
+        Prothrombin=float(request.form.get('Prothrombin')),
+        Stage=float(request.form.get('Stage'))
+        )
+
         pred_df=data.get_data_as_data_frame()
         print(pred_df)
         print("Before prediction")
