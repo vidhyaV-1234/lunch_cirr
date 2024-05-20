@@ -27,7 +27,7 @@ def predict_datapoint():
             Sex=request.form.get('Sex'),
             Ascites=request.form.get('Ascites'),
             Hepatomegaly=request.form.get('Hepatomegaly'),
-            Spiders=request.form.get('Spiders')
+            Spiders=request.form.get('Spiders'),
             Edema=request.form.get('Edema'),
             Bilirubin=float(request.form.get('Bilirubin')),
             Cholesterol=float(request.form.get('Cholesterol')),
